@@ -13,4 +13,6 @@ public interface TravelService {
     Travel getTravelByName(String travelName) throws TravelNotFoundException;
 
     boolean deleteTravel(long id);
+
+    List<Travel> getAllTravels();
 }

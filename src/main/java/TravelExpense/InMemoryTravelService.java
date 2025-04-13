@@ -52,4 +52,9 @@ public class InMemoryTravelService implements TravelService {
         }
         return false;
     }
+
+    @Override
+    public List<Travel> getAllTravels() {
+        return List.of();
+    }
 }

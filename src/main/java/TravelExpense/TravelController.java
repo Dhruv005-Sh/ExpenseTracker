@@ -44,8 +44,8 @@ public class TravelController {
      * @return ResponseEntity containing a list of all Travels with HTTP status 200 (OK)
      */
     @GetMapping
-    public ResponseEntity<List<Travel>> getAllTravel() {
-        List<Travel> travels=travelService.getAlltravel();
+    public ResponseEntity<List<Travel>> getAllTravels() {
+        List<Travel> travels=travelService.getAllTravels();
         return ResponseEntity.ok(travels);
 
     }

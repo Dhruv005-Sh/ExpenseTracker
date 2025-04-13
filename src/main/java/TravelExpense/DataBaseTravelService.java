@@ -25,7 +25,7 @@ public class DataBaseTravelService implements TravelService {
     /**
      * Creates a new DatabaseTravelService with the provided repository.
      *
-     * @param travelRepository the repository to use for database operations
+     * @param travelRespository the repository to use for database operations
      */
     @Autowired
     public DataBaseTravelService(TravelRepository travelRespository) {
@@ -35,7 +35,7 @@ public class DataBaseTravelService implements TravelService {
     /**
      * Adds a new travel to the database.
      *
-     * @param Travel the travel to add
+     * @param travel the travel to add
      * @return the saved travel with any database-generated values (like ID)
      */
     @Override
@@ -78,7 +78,7 @@ public class DataBaseTravelService implements TravelService {
     /**
      * Finds a travel in the database using its Destination name.
      *
-     * @param name the Destination name of the Travel to find
+     * @param travelName the Destination name of the Travel to find
      * @return the found Travel or null if no Travel exists with the given name
      */
 
@@ -102,5 +102,10 @@ public class DataBaseTravelService implements TravelService {
             return true;
         }else
         {throw new TravelNotFoundException("Travel with id " + id + " not found");}
+    }
+
+    @Override
+    public List<Travel> getAllTravels() {
+        return List.of();
     }
 }
